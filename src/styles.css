@@ -28,8 +28,9 @@ footer {
   height: fit-content;
 }
 
-.city {
-  font-size: 24px;
+.big {
+  font-size: 36px;
+  font-weight: 400px;
 }
 
 .city-field {
