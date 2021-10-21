@@ -15,7 +15,7 @@ function formatDate(date) {
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday"
+    "Saturday",
   ];
   return `${days[currentDay]} ${hours}:${minutes}`;
 }
