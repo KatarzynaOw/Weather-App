@@ -29,9 +29,14 @@ footer {
   border: none;
 }
 
-.big {
-  font-size: 36px;
+.defCity {
+  font-size: 46px;
   font-weight: 400px;
+  padding-left: 20px;
+}
+
+.defTemp {
+  font-size: 42px;
 }
 
 .city-field {
@@ -73,43 +78,10 @@ footer {
   margin: 0 auto;
 }
 
-.next-days {
-  border: 1px solid #424874;
-  border-radius: 6px;
-  padding: 5px;
-  width: 80%;
-  display: block;
-  margin: 0 auto;
-  margin-top: 5px;
-  background-color: rgb(214, 233, 240, 0.5);
+.temperature {
+  line-height: 1;
 }
 
-.card {
-  background-color: #a6c9dc;
-  font-size: 8px;
-  width: 60px;
-  border: none;
-  display: block;
-}
-
-.card:hover {
-  background-color: #3da0c7;
-}
-
-.card-img-top {
-  width: 30px;
-  display: block;
-  margin: 0 auto;
-}
-
-.card-title {
-  text-align: left;
-  font-size: 14px;
-  width: 100px;
-}
-
-.card-body {
-  width: 100px;
-  display: block;
-  margin: 0 auto;
+.units {
+  vertical-align: top;
 }

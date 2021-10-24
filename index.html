@@ -42,32 +42,31 @@
       </form>
 
       <div  class="currently">
-          <ul>
-            <li class="big" id="city"><strong>Warsaw</strong></li>
-            <li id="current-time">Wednesday 15:00</li>
-            <li id="description"> Partially cloudy </li>
-          </ul>  
-          <div class="row">
-
-          <div class="col-6">
-                <span id="temperature" class="big"> 22  </span>  
-                <span class="units">
-                <a href="#" id="celsius-link">°C </a>|
-                <a href="#" id="fahrenheit-link"> °F</a>
-                </span>
-                <img src="icons/cloudy.png" width="60" class="float-left" id="icon"/>
+        <div class="defCity" id="city"><strong>Warsaw</strong></div>
+        <div class="row">
+          <div class="col-6">  
+            <ul>
+             
+              <li id="current-time">Wednesday 15:00</li>
+              <li id="description"> Partially cloudy </li>
+              <span id="temperature" class="defTemp"> 6 </span>  
+                  <span class="units">
+                  <a href="#" id="celsius-link">°C </a>|
+                  <a href="#" id="fahrenheit-link"> °F</a>
+                  </span>
+                  <img src="icons/cloudy.png" width="60" class="float-left" id="icon"/>
+              </ul>
           </div>
-          
+
           <div class="col-6">
             <ul>
-              <li> Precipitation: <span>0</span>% </li>
-              <li id="humidity"> Humidity: <span>20</span>% </li>
-              <li> Wind: <span id="wind">10</span>km/h</li>
+              <li> Humidity: <span id="humidity"> 70 </span>%</li>
+              <li> Wind: <span id="wind"> 2 </span>km/h</li>
             </ul>
-          </div>          
-        </div>
-
-        <hr/>
+          </div>   
+        </div>          
+    
+    <hr/>
 
       <div class="forecast">
          <div class="row">
