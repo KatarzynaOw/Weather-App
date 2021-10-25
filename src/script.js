@@ -20,6 +20,14 @@ function formatDate(date) {
   return `${days[currentDay]} ${hours}:${minutes}`;
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 function displayWeather(response) {
   console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
@@ -83,26 +91,30 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
+
   let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+
   let forecastHTML = `<div class="row">`;
 
-  days.forEach(function (day) {
+  forecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       `       <div class="col-2">
-              <div class="forecast-day">${day}</div>
+              <div class="forecast-day">${forecastDay.dt}</div>
               <img  
-              src="icons/sun.png" 
+              src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" 
               alt="" 
               width="42"/>
               <div class="forecast-temperatures">
                <span class="forecast-temperature-max">
-                24°
+                ${forecastDay.temp.max}
                </span>
                <span class="forecast-temperature-min"> 
-                12°
+                ${forecastDay.temp.min}
                </span>
               </div>
         </div>`;
