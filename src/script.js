@@ -74,6 +74,36 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `         <div class="col-2">
+              <div class="forecast-day">${day}</div>
+              <img  
+              class="forecast-icon" 
+              src="icons/sun.png" 
+              alt="" 
+              width="42"/>
+              <div class="forecast-temperatures">
+               <span class="forecast-temperature-max">
+                24°
+               </span>
+               <span class="forecast-temperature-min"> 
+                12°
+               </span>
+              </div>
+        </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
+
 let timeElement = document.querySelector("#current-time");
 let currentTime = new Date();
 timeElement.innerHTML = formatDate(currentTime);
@@ -89,3 +119,5 @@ celsiusLink.addEventListener("click", convertToCelsius);
 
 let currentLocationBtn = document.querySelector("#current-location-btn");
 currentLocationBtn.addEventListener("click", getCurrentLocation);
+
+displayForecast();
