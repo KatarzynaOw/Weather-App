@@ -22,6 +22,7 @@ footer {
 
 .container {
   font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
   color: #056676;
   border-radius: 0px;
   width: 70%;
@@ -62,9 +63,10 @@ footer {
 }
 
 .currently {
-  border: 1px solid #424874;
-  border-radius: 6px;
+  border: none;
+  border-radius: 20px;
   padding: 5px;
+  padding-top: 15px;
   margin-bottom: 10px;
   width: 80%;
   display: block;
